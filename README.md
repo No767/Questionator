@@ -4,7 +4,7 @@
 
 # Questionator
 
-[![Required Python Version](https://img.shields.io/badge/Python-3.10%20|%203.11-blue?logo=python&logoColor=white)](https://github.com/No767/Questionator/blob/dev/pyproject.toml) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/No767/Questionator?display_name=tag&label=Release&logo=github)](https://github.com/No767/Questionator/releases) [![GitHub License](https://img.shields.io/github/license/No767/Questionator?label=License&logo=github)](https://github.com/No767/Questionator/blob/dev/LICENSE)
+[![Required Python Version](https://img.shields.io/badge/Python-3.10%20|%203.11-blue?logo=python&logoColor=white)](https://github.com/No767/Questionator/blob/dev/pyproject.toml) [![CodeQL](https://github.com/No767/Questionator/actions/workflows/codeql.yml/badge.svg)](https://github.com/No767/Questionator/actions/workflows/codeql.yml) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/No767/Questionator?display_name=tag&label=Release&logo=github)](https://github.com/No767/Questionator/releases) [![GitHub License](https://img.shields.io/github/license/No767/Questionator?label=License&logo=github)](https://github.com/No767/Questionator/blob/dev/LICENSE)
 
 A QOTD (Question of the Day) bot built for a special Discord server
 
