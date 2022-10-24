@@ -43,7 +43,7 @@ COPY /Bot/main.py /Questionator/Bot/
 COPY /Bot/questionator_client.py /Questionator/Bot/
 COPY /Bot/Cogs /Questionator/Bot/Cogs
 COPY /Docker/Alpine-Docker/start.sh /Questionator/start.sh
-
+COPY /Docker/Alpine-Docker/wait-for /Questionator/wait-for
 
 # Copy dependency wheels from builder stage
 COPY --from=builder /Questionator/wheels /Questionator/wheels
