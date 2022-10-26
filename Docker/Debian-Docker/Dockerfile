@@ -46,7 +46,6 @@ RUN apt update \
 # Docker build context: '.' (root of the repo)
 WORKDIR /Questionator
 COPY /Bot/main.py /Questionator/Bot/
-COPY /Bot/questionator_client.py /Questionator/Bot/
 COPY /Bot/Cogs /Questionator/Bot/Cogs
 COPY /Docker/Debian-Docker/start.sh /Questionator/start.sh
 COPY /Docker/Debian-Docker/wait-for /Questionator/wait-for

@@ -40,7 +40,6 @@ RUN apk add --no-cache \
 # Docker build context: '.' (root of the repo)
 WORKDIR /Questionator
 COPY /Bot/main.py /Questionator/Bot/
-COPY /Bot/questionator_client.py /Questionator/Bot/
 COPY /Bot/Cogs /Questionator/Bot/Cogs
 COPY /Docker/Alpine-Docker/start.sh /Questionator/start.sh
 COPY /Docker/Alpine-Docker/wait-for /Questionator/wait-for
