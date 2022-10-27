@@ -11,12 +11,22 @@ class HelpSelect(discord.ui.Select):
             for cog_name, cog in sorted(bot.cogs.items())
         ]
         super().__init__(
-            placeholder="Select a command",
+            placeholder="Select a category",
             options=options,
         )
 
     async def callback(self, interaction: discord.Interaction):
-        await interaction.response.send_message("This is a test command!")
+        cog = self.bot.get_cog(self.values[0])
+        embed = discord.Embed(
+            title=f"{cog.__cog_name__} Commands",
+            description="\n".join(
+                f"`/{command.qualified_name}`: {command.description}"
+                for command in cog.walk_app_commands()
+            ),
+            color=discord.Color.from_rgb(255, 145, 244),
+            timestamp=discord.utils.utcnow(),
+        )
+        await interaction.response.send_message(embed=embed)
 
 
 class Help(commands.Cog):
@@ -36,6 +46,11 @@ class Help(commands.Cog):
         embed.description = f"{self.bot.user.name} is a QOTD bot meant a special discord server.\nUse the menu below to view commands"
         embed.add_field(name="Server Count", value=len(self.bot.guilds), inline=True)
         embed.add_field(name="User Count", value=len(self.bot.users), inline=True)
+        embed.add_field(
+            name="Total Categories",
+            value=str(len([cogs for cogs in self.bot.cogs])),
+            inline=True,
+        )
         embed.set_thumbnail(url=self.bot.user.display_avatar.url)
         view = discord.ui.View().add_item(HelpSelect(self.bot))
         await interaction.response.send_message(embed=embed, view=view)
