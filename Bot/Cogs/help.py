@@ -26,7 +26,7 @@ class HelpSelect(discord.ui.Select):
             color=discord.Color.from_rgb(255, 145, 244),
             timestamp=discord.utils.utcnow(),
         )
-        await interaction.response.send_message(embed=embed)
+        await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
 class Help(commands.Cog):
