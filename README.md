@@ -20,5 +20,5 @@ Sorry, this bot is private. But you can self host a version of this bot. **It's 
 
 ## Resources and Links
 
-- GHCR
-- Docker Hub
+- [GHCR](https://github.com/No767/Questionator/pkgs/container/questionator)
+- [Docker Hub](https://hub.docker.com/r/no767/questionator)
