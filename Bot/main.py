@@ -62,7 +62,7 @@ logging.basicConfig(
 
 async def main():
     async with QuestionatorClient(
-        intents=intents, command_prefix=".", testing_guild_id=DEV_GUILD.id
+        intents=intents, command_prefix=".", testing_guild_id=None
     ) as bot:
         await bot.start(QUESTIONATOR_TOKEN)
 
