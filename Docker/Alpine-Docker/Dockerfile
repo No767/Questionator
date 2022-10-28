@@ -41,6 +41,8 @@ RUN apk add --no-cache \
 WORKDIR /Questionator
 COPY /Bot/main.py /Questionator/Bot/
 COPY /Bot/Cogs /Questionator/Bot/Cogs
+COPY /Bot/Libs /Questionator/Bot/Libs
+COPY /Scripts/seeder.py /Questionator/seeder.py
 COPY /Docker/Alpine-Docker/start.sh /Questionator/start.sh
 COPY /Docker/Alpine-Docker/wait-for /Questionator/wait-for
 
